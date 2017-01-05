@@ -18,6 +18,12 @@
   "homepage": "https://github.com/DMonroe08/DWA#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "mocha": "^3.2.0"
+  },
+  "devDependencies": {
+    "expect": "^1.20.2",
+    "mocha": "^3.2.0",
+    "supertest": "^2.0.1"
   }
 }
