@@ -18,7 +18,7 @@ console.log(randString);
 
 router.get('/string', function(req, res){
   rand = require(randString);
-  //res.json('rand': 'randString');
+  res.json({rand: true});
 });
   //Returns Router
   return router;

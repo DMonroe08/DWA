@@ -1,4 +1,4 @@
-var server = require('../src/server.js');
+var server = require('supertest');
 describe('API', function() {
   var server;
   beforeEach(function(){
