@@ -13,7 +13,7 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
 	logging:false,
 });
 
-const genre = sequelize.define('book', {
+const book = sequelize.define('book', {
 	id:{type:Sequelize.INTEGER, primaryKey: true},
 	name:{type:Sequelize.STRING,}
 });
