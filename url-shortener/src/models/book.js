@@ -23,7 +23,7 @@ exports.find = (payload, err, success) => {
 
 //Deletes a book by a specific ID
 exports.destroy = (payload, err, success) => {
-	db.genre.find({
+	db.book.find({
 		where:{id: payload.id,},
 
 	}).then(success).catch(err);
@@ -31,7 +31,7 @@ exports.destroy = (payload, err, success) => {
 
 //updates a book by a specific ID
 exports.update = (payload, err, success) => {
-	db.genre.find({
+	db.book.find({
 		where:{id: payload.id,},
 	}).then((updatingData)=>{
 		updatingData.updateAttributes(payload).then(success).catch(err);
