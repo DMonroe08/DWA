@@ -1,18 +1,15 @@
 const db = require('./db');
 
-//Creates a book
-exports.create = (payload,err,success) => {
-  db.book.create(payload).then(succes).catch(err);
+exports.create = (payload, err, success) => {
+	db.url.create(payload).then(success).catch(err);
 }
 
-//Gets all books
 exports.findAll = (err, success) => {
-  db.book.findAll().then(success).catch(err);
+	db.url.findAll().then(success).catch(err);
 }
 
-//Gets a book by a specific ID
 exports.find = (payload, err, success) => {
-	db.book.find({
+	db.url.find({
 		where:{id: payload.id,},
 		include: [{
 			all: true,
@@ -21,17 +18,15 @@ exports.find = (payload, err, success) => {
 	}).then(success).catch(err);
 }
 
-//Deletes a book by a specific ID
 exports.destroy = (payload, err, success) => {
-	db.book.find({
+	db.url.find({
 		where:{id: payload.id,},
 
 	}).then(success).catch(err);
 }
 
-//updates a book by a specific ID
 exports.update = (payload, err, success) => {
-	db.book.find({
+	db.url.find({
 		where:{id: payload.id,},
 	}).then((updatingData)=>{
 		updatingData.updateAttributes(payload).then(success).catch(err);

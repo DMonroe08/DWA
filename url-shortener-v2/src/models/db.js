@@ -13,11 +13,11 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
 	logging:false,
 });
 
-const book = sequelize.define('book', {
-	id:{type:Sequelize.INTEGER, primaryKey: true},
-	name:{type:Sequelize.STRING,}
+const url = sequelize.define('url', {
+  id:{type:Sequelize.INTEGER, primaryKey:true},
+	orig:{type:Sequelize.STRING, }
 });
 
 sequelize.sync();
 exports.sequelize = sequelize;
-exports.book = book;
+exports.url = url;

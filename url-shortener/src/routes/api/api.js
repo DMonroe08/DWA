@@ -21,7 +21,7 @@ module.exports = (express) => {
 		})
 	});
 
-  router.post('/genres:id', (req,res) => {
+  router.post('/books:id', (req,res) => {
     req.body.id = req.params.id;
     book.find(req.body, (err) => {
 			res.status(500).json(err);
